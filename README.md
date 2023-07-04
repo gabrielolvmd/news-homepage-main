@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/gabrielolvmd/news-homepage-main)
+- Solution URL: [https://github.com/gabrielolvmd/news-homepage-main]
 - Live Site URL: [Add live site URL here]()
 
 ### Built with
