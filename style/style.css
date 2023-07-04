@@ -1,0 +1,252 @@
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  margin: 1em;
+  padding: 0;
+  background: hsl(36, 100%, 99%);
+  font-family: "Inter";
+}
+
+header {
+  position: relative;
+  max-width: 1320px;
+  margin: 1em auto;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+header .desktop-menu {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+header .desktop-menu ul {
+  display: flex;
+  gap: 3em;
+}
+header .desktop-menu ul li {
+  color: hsl(236, 13%, 42%);
+}
+header .desktop-menu ul li:hover {
+  color: hsl(35, 77%, 62%);
+}
+header .menu-open-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+}
+header #modal-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  background: hsl(36, 100%, 99%);
+  padding: 2em;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 2em;
+}
+header #modal-menu ul a {
+  color: hsl(240, 100%, 5%);
+}
+header #modal-menu ul li {
+  color: hsl(240, 100%, 5%);
+  margin: 2em 0;
+}
+header #modal-menu button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  align-self: flex-end;
+}
+
+main {
+  display: grid;
+  align-items: flex-start;
+  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  max-width: 1320px;
+  max-height: 900px;
+  margin: 0 auto;
+}
+
+.banner-img {
+  grid-column: span 2;
+  width: 100%;
+}
+.banner-img img {
+  display: block;
+  width: 100%;
+}
+
+.main-section-title h1 {
+  color: hsl(240, 100%, 5%);
+  font-size: 3em;
+  font-weight: 800;
+  line-height: 1em;
+}
+
+.main-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-section-content p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+.main-section-content button {
+  align-self: flex-start;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 1em;
+  letter-spacing: 0.4em;
+  color: white;
+  background: hsl(5, 85%, 63%);
+  border: none;
+  cursor: pointer;
+}
+.main-section-content button:hover {
+  background: hsl(240, 100%, 5%);
+}
+
+.news-section {
+  grid-row: span 2;
+  background: hsl(240, 100%, 5%);
+  padding: 1.5em;
+}
+.news-section h2 {
+  font-size: 2em;
+  color: #e9ab53;
+}
+.news-section a h3 {
+  color: hsl(36, 100%, 99%);
+  margin: 1.5em 0 1em;
+}
+.news-section a:hover h3 {
+  color: hsl(35, 77%, 62%);
+}
+.news-section p {
+  color: #c5c6ce;
+  font-weight: 400;
+  word-spacing: 0.2em;
+  line-height: 1.5em;
+}
+.news-section p:not(:last-child) {
+  border-bottom: 1px solid #c5c6ce;
+  padding-bottom: 1.5em;
+}
+
+.card {
+  display: flex;
+  gap: 1em;
+}
+.card .card-image {
+  flex: 0 0 30%;
+}
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card-content h2 {
+  color: hsl(233, 8%, 79%);
+  font-size: 2.5em;
+}
+.card .card-content a h3 {
+  font-size: 1.3em;
+  color: hsl(240, 100%, 5%);
+}
+.card .card-content a:hover h3 {
+  color: hsl(5, 85%, 63%);
+}
+.card .card-content p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5em;
+}
+
+.attribution {
+  grid-column: span 3;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 968px) {
+  main {
+    gap: 2em;
+    grid-template-columns: 1fr;
+  }
+  .banner-img {
+    grid-column: span 1;
+  }
+  .news-section {
+    grid-row: 4;
+  }
+  .card {
+    flex-direction: wrap;
+  }
+  .main-section-content p {
+    margin-bottom: 1.5em;
+  }
+  .card {
+    display: flex;
+    gap: 1em;
+  }
+  .card .card-image {
+    flex: 0 0 30%;
+  }
+  .card .card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .card .card-content h2 {
+    font-size: 1.5em;
+  }
+  .card .card-content a h3 {
+    font-size: 1em;
+  }
+  .attribution {
+    grid-column: 1;
+  }
+}
+@media screen and (min-width: 650px) and (max-width: 968px) {
+  .card .card-content h2 {
+    font-size: 2em;
+  }
+  .card .card-content a h3 {
+    font-size: 1.5em;
+  }
+}/*# sourceMappingURL=style.css.map */
